@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 const Signup = () => {
     const [ email, setEmail ] = useState( '' )
     const [ password, setPassword ] = useState( '' )
+    const [ Cpassword, setCPassword ] = useState( '' )
+
     const navigate = useNavigate()
 
     const register = async ( e ) => {
@@ -43,6 +45,13 @@ const Signup = () => {
                         onChange={ (e)=> setPassword(e.target.value) }
                         className="md:w-[60%] md:bg-[#00a4ea8b] focus:outline-none px-2 py-1 text-[16px] rounded-md " />
                     <label className='font-semibold  text-[20px]' htmlFor="confirmPassword">Confirm Password</label>
+                    <input
+                        id='Cpassword'
+                        type="Cpassword"
+                        value={Cpassword}
+                        onChange={ (e)=> setCPassword(e.target.value) }
+                        className="md:w-[60%] md:bg-[#00a4ea8b] focus:outline-none px-2 py-1 text-[16px] rounded-md " />
+                    
                    
                     <div className="mt-6">
                         <button  ><input type="submit" value="signup" className="border text-[18px] hover:bg-[#91a8b2] p-1 bg-[#00A4EA]" /></button>
