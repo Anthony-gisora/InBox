@@ -1,5 +1,4 @@
 import { useState } from "react";
-import GoogleLogin, { } from 'react-google-login'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -28,9 +27,7 @@ const Signup = () => {
                 </div>
                 <h2 className='text-[24px] font-bold text-[#F1F1E6] md:text-[#00A4EA] m-auto'>In Box</h2>
                 <form onSubmit={(e)=>{register(e)}} className='flex flex-col items-center justify-evenly w-[70%] m-auto' >
-                    
-                    <GoogleLogin className=' md:w-[40%] flex items-center justify-center text-[20px] mb-6' />
-                    
+                                        
                     <label className='font-semibold  text-[20px]' htmlFor="email">Email</label>
                     <input
                         id='email'
